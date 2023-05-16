@@ -11,7 +11,25 @@ input.setAttribute('id', 'input');
 
 
 const page = elementBuild('div', {'id' : 'container'},
-                elementBuild('div', {'id': 'weather'}, ),
+                elementBuild('div', {'id': 'weather'},
+                    elementBuild('div', {'id': 'weatherCard'},
+                        elementBuild('div', {'id' : 'location'}),
+                        elementBuild('div', {'id' : 'condition'}),
+                       elementBuild('div', {'id' : 'tempCon'},
+                        elementBuild('div', {'id': 'temp'}),
+                        elementBuild('div', {'id' : 'con'},
+                            elementBuild('img', {'id' : 'conImg'}))),
+                       elementBuild('div', {'id' : 'feelsHum'},
+                            elementBuild('div', {'id': 'feelsBox'},
+                                elementBuild('div', {'id': 'feelsTit'}, "Feels Like"),
+                                elementBuild('div', {'id' : 'feels'})),
+                            elementBuild('div', {'id' : 'humBox'},
+                            elementBuild('div', {'id' : 'humTit'}, "humidity"),
+                            elementBuild('div', {'id' : 'hum'})
+                            )
+                        ) 
+                    ) 
+                ),
                 elementBuild('div', {'id' : 'search'},
                     elementBuild('div', {'id' : 'searchInfo'},
                         elementBuild('div', {'id': 'searchTitle'}, 'Current Weather'),
@@ -22,6 +40,7 @@ const page = elementBuild('div', {'id' : 'container'},
             )
 
 document.body.appendChild(page);
+async.getForecast('Spyrock')
 
 
 

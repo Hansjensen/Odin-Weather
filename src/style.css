@@ -54,3 +54,63 @@ body {
     font-size: 1.5rem;
     text-align: center;
 }
+
+#weatherCard {
+    height: 50%;
+    width: 50%;
+    background-color: rgba(127, 255, 212, 0.507);
+    margin-left: 30%;
+    border-radius: 30px;
+    box-shadow: 2px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+}
+
+#location {
+    font-size: 2rem;
+    font-weight: 800;
+    text-shadow: 5px;
+    margin-top: 10%;
+}
+
+#condition {
+    margin-top: 5px;
+}
+
+#tempCon {
+    display: flex;
+    margin-top: 25%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#temp {
+    font-size: 3.3rem;
+    font-weight: 1000;
+    text-shadow: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+#con {
+    width: 30%;
+}
+
+#con>img {
+    width: 70%;
+}
+
+#feelsHum {
+    display: flex;
+    margin-top: 25%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#feels, #hum {
+    font-size: 2.5rem;
+    
+}
